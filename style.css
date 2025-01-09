@@ -1,0 +1,140 @@
+/* Corpo */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ff004d, #ff9900, #ffdd00, #00cc78, #007dff, #5b2cff); /* Gradiente LGBT */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Principal */
+#container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Entrada de Texto */
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    background-color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* Botões */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+}
+
+#btn-adicionar {
+    background: linear-gradient(to right, #ff004d, #ff9900);
+}
+
+#btn-adicionar:hover {
+    background: linear-gradient(to right, #ff9900, #ff004d);
+    transform: scale(1.1);
+}
+
+#filtros button {
+    background: linear-gradient(to right, #00cc78, #007dff);
+}
+
+#filtros button:hover {
+    background: linear-gradient(to right, #007dff, #00cc78);
+    transform: scale(1.1);
+}
+
+/* Lista de Tarefas */
+#lista-tarefas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista-tarefas li {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#lista-tarefas li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarefas Concluídas */
+#lista-tarefas li.concluida {
+    text-decoration: line-through;
+    color: #777;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de Concluir/Excluir */
+#lista-tarefas button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(to right, #5b2cff, #007dff);
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#lista-tarefas button:hover {
+    background: linear-gradient(to right, #007dff, #5b2cff);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#lista-tarefas li {
+    animation: fadeIn 0.5s ease-in-out;
+}
