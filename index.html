@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f0f9;
+            color: #333;
+        }
+
+        #lista-tarefas li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .concluida {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        button {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Gerenciador de Tarefas</h1>
+    <input type="text" id="input-tarefa" placeholder="Adicione uma nova tarefa" />
+    <button id="btn-adicionar">Adicionar</button>
+
+    <div id="filtros">
+        <button data-filtro="todas">Todas</button>
+        <button data-filtro="concluidas">Concluídas</button>
+        <button data-filtro="pendentes">Pendentes</button>
+    </div>
+
+    <ul id="lista-tarefas"></ul>
+
 </body>
 </html>
